@@ -27,14 +27,36 @@
 
 //SECTION - write a function that takes an array that returns only intigers
 //["Ali", 3, "Isaac", 5, 9]
-function numFilter(arr) {
-    let integer = [] //declared integer to an empty array
-    for (let i = 0; i < arr.length; i++) {
-        if(Number.isInteger(arr[i])) {
-            integer.push(arr[i])
-        }
-    }
-    return integer
-}
+// function numFilter(arr) {
+//     let integer = [] //declared integer to an empty array
+//     for (let i = 0; i < arr.length; i++) {
+//         if(Number.isInteger(arr[i])) {
+//             integer.push(arr[i])
+//         }
+//     }
+//     return integer
+// }
 
-console.log(numFilter(["Ali", 3, "Isaac", 5, 9]))// arrays are 0 based count not 1 based
+// console.log(numFilter(["Ali", 3, "Isaac", 5, 9]))// arrays are 0 based count not 1 based
+
+
+
+
+
+
+
+
+//SECTION - write a function that takes an array with numbers and multiplies by 2 then returns new total
+// arrayByTwo([2,5,4])
+function arrayByTwo(arr) {
+    for (i = 0; i < arr.length; i++) {
+       arr[i] *= 2
+}
+return arr
+}
+console.log(arrayByTwo([2,5,4]))
+
+//One line
+const oneLineArray = (arr) => arr.map(el => el*2)
+
+console.log(oneLineArray([2,5,4]))
