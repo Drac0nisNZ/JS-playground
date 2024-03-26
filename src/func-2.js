@@ -54,28 +54,82 @@ output -> 1+6+11 = 18
 
 // console.log(duplicates);
 
-function dupeCheck(arr) {
-    const dupes = []
-    for(let i = 0; i < arr.length; i++) {
-        // checks through each instance in the array
-        for(let d = i + 1; d < arr.length; d++) {
-            //compares each number in the array to each of the following numbers
-            if(arr[i] === arr[d] && !dupes.includes(arr[i])) {
-                dupes.push(arr[i]);
-                //if the numbers match and aren't already dupes, adds dupes to array
-            }
-    }
-}
-return dupes
-}
+// function dupeCheck(arr) {
+//     const dupes = []
+//     for(let i = 0; i < arr.length; i++) {
+//         // checks through each instance in the array
+//         for(let d = i + 1; d < arr.length; d++) {
+//             //compares each number in the array to each of the following numbers
+//             if(arr[i] === arr[d] && !dupes.includes(arr[i])) {
+//                 dupes.push(arr[i]);
+//                 //if the numbers match and aren't already dupes, adds dupes to array
+//             }
+//     }
+// }
+// return dupes
+// }
 
-console.log(dupeCheck([1,2,3,4,5,6,5,1]))
-//ES6 -
-const ArraysDuplicateNumbers = arr => (
-    arr= [...new Set([...arr.filter(num =>
-        arr.indexOf(num) !== arr.lastIndexOf(num)
-        )])].sort((a,b) => a-b),// sorts the array and returns it in order
-        arr.length ? arr: null
-)
+// console.log(dupeCheck([1,2,3,4,5,6,5,1]))
+// //ES6 -
+// const ArraysDuplicateNumbers = arr => (
+//     arr= [...new Set([...arr.filter(num =>
+//         arr.indexOf(num) !== arr.lastIndexOf(num)
+//         )])].sort((a,b) => a-b),// sorts the array and returns it in order
+//         arr.length ? arr: null
+// )
 
-console.log(ArraysDuplicateNumbers([1, 2, 3, 4, 5, 6, 5, 1]))
+// console.log(ArraysDuplicateNumbers([1, 2, 3, 4, 5, 6, 5, 1]))
+
+// create a function that takes an array of numbers or letters and returns a string
+// arrayToString([6,7,"Ali","Sonny",10]) -> "12345"
+
+// function arrayToString(arr) {
+//     let result = ""
+//     for(let i = 0; i < arr.length; i++) {
+//         result = result + arr[i]
+//     }
+//     return result
+// }
+// console.log(arrayToString([6,7,"Ali","Sonny",10]))
+
+// create a function that takes an array with numbers, transform that into a mirror
+// arrayToMirror([0,2,4,6,8]) output -> [0,2,4,6,8,6,4,2,0]
+// function arrayToMirror(arr) {
+//     for(let i = arr.length-2; i >= 0; i--) {
+//         arr.push(arr[i])
+//     }
+//     return arr
+// }
+// console.log(arrayToMirror([0,2,4,6,8]))
+//ES6
+// const toMirror = arr => [...arr, ...arr.reverse().slice(1)]
+// console.log(toMirror([0,2,4,6,8]))
+
+// create a function that returns the total number of arrays inside a givin man array.
+// totalOfArrays([[1,2,3],[4,5,6]]) -> total number of arrays = 2
+// function arrayCount(arr) {
+//     let count = 0;
+//     for(let i = 0; i < arr.length; i++) {
+//         if(Array.isArray(arr[i])) {
+//             count++
+//         }
+//     }
+//     return count
+// }
+
+// console.log(arrayCount([[1,2,3],[4,5,6], 10, []]))
+
+// create a function that takes a number as an argument and returns an array of numbers counting down from the number to zero
+// Ex: arrayCountDown(5) output -> [5,4,3,2,1,0]
+// function countDownArray(num) {
+//     let arr = []
+//     for(let i = num; i >= 0; i--) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// console.log(countDownArray(5))
+
+//ES6
+// const countDown = (num) => Array.from(Array(num+1).keys()).reverse()
+// console.log(countDown(10))
