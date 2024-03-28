@@ -28,16 +28,16 @@ output -> 1+6+11 = 18
 // function sumMinArrays(arr) {
 //     let sumTotal = 0;
 
-//     for(let i = 0; i < arr.length; i++) {
-//         let y = arr[i][0]
-//         for(let x = 0; x<arr[i].length; x++) {
-//             if(y > arr[i][x]) {
-//                 y = arr[i][x]
-//             }
-//     }
-//     sumTotal += y
-//     }
-//    return sumTotal
+    for(let i = 0; i < arr.length; i++) {
+        let y = arr[i][0]
+        for(let x = 0; x<arr[i].length; x++) {
+            if(y > arr[i][x]) {
+                y = arr[i][x]
+            }
+    }
+    sumTotal += y
+    }
+   return sumTotal
 // }
 // console.log(sumMinArrays([[5,4,3,2,1], [10,9,8,7,6], [15,14,13,12,11]]))
 
@@ -133,3 +133,8 @@ output -> 1+6+11 = 18
 //ES6
 // const countDown = (num) => Array.from(Array(num+1).keys()).reverse()
 // console.log(countDown(10))
+const size = 3;
+const grid = Array.from(Array(size), () => new Array(size).fill(['_']));
+console.log(grid);
+
+// turn counter 0 iterate +- for turn "Add (X/O) to which cell?" 

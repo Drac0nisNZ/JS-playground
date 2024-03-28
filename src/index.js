@@ -49,12 +49,50 @@
 
 // Crate a function that takes a given date (3/23/2024) return the day of the week
 // as a string assuming the week starts on Sunday.
-function dayCheck(day) {
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"]
-    let date = new Date(day)
-    return days[date.getDay()]
-}
-console.log(dayCheck("03/23/2024"))
+// function dayCheck(day) {
+//     const days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"]
+//     let date = new Date(day)
+//     return days[date.getDay()]
+// }
+// console.log(dayCheck("03/23/2024"))
 
-const getDayNameTwo = day => new Date(day).toLocaleDateString('en-us', {weekday: 'long'})
-console.log(getDayNameTwo("03/23/2024"))
+//ES6
+// const getDayNameTwo = day => new Date(day).toLocaleDateString('en-us', {weekday: 'long'})
+// console.log(getDayNameTwo("03/23/2024"))
+
+// Create a function that can take a flat array and change it to nested arrays to represent
+// an incremental depth level
+
+// Ex nestArray([1,2,6,3]) -> [1, [2, [6, [3]]]]
+// function nestArray(arr) {
+//     if(arr.length == 1) return arr
+//     let temp = []
+//     for(let i = 0; i < arr.length; i++)
+//     return [arr[0], nestArray(temp.slice(1))]
+// }
+// console.log(nestArray([1,2,6,3]))
+
+// const nestArray2 = arr => arr.length === 1 ? arr : [arr[0], nestArray2(arr.slice(1))]
+// console.log(nestArray2([1, 2, 3]))
+
+
+
+
+
+
+
+// create a function that takes two dates and returns the number of days between the first and second date.
+
+/* getNumbers(
+    newDate("March 26 2024"),
+    newDate("March 30 2024")
+) */
+// output -> 4
+//ES6 (provide inline comments for the code)
+const getDays = (date1, date2) => {
+    return new Date(date2 - date1).getDate() -1
+}
+console.log(getDays(
+    new Date("March 26 2024"),
+    new Date("March 30 2024")
+    ))
