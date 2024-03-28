@@ -89,10 +89,28 @@
 ) */
 // output -> 4
 //ES6 (provide inline comments for the code)
-const getDays = (date1, date2) => {
-    return new Date(date2 - date1).getDate() -1
-}
-console.log(getDays(
-    new Date("March 26 2024"),
-    new Date("March 30 2024")
-    ))
+// const getDays = (date1, date2) => {
+//     return new Date(date2 - date1).getDate() -1
+// }
+// console.log(getDays(
+//     new Date("March 26 2024"),
+//     new Date("March 30 2024")
+//     ))
+
+//create a function that takes an array of stringified numbers as a parameter and returns them as numbers
+//Ex : ["1", "3", "6.7"] -> [1, 3, 6.7]  
+
+// let arrayToNumbers = arr => arr.map(e => +e)
+
+// console.log(arrayToNumbers(["1", "3", "6.7"]))
+
+// function arrayToNumbers2(arr) {
+//     let temp = []
+//     for(let i = 0; i < arr.length; i++) {
+//         temp[i] = JSON.parse(arr[i])
+//     }
+//     return temp
+// }
+
+// console.log(arrayToNumbers2(["1", "3", "6.7"]))
+
