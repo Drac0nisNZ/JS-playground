@@ -114,3 +114,53 @@
 
 // console.log(arrayToNumbers2(["1", "3", "6.7"]))
 
+// Create a function that returns (true) if all parameters are truthy and false otherwise.
+// Ex. checkParam(true, true, true) -> true
+// checkParam(5, 1, 3, 0) -> false
+// Falsy values are: false, 0, and ""
+
+// function checkParam(param) {
+//         if(param.every) {
+//         return true
+//     } else {
+//         return false
+//     }
+//     }
+// console.log(checkParam(5, 1, 5, 6, 1))
+// function checkParam2(arr){
+//     let value = false
+//             if(arr[i] !== 0 && arr[i] !== false && arr[i] !=="") {
+//             value = true
+//         }
+//     }
+//     return value
+// }
+
+// console.log(checkParam2(5, 1, 3, 1))
+
+// const checkParam3 = (...args) => args.every(Boolean)
+// console.log(checkParam3(5, 1, 3, 1))
+
+// Create a function to check if an array contains a particular number
+// Ex: checkArray([5,5,6], 5) -> true
+// Ex: checkArray([1,3,5,7,10], 2) -> false
+
+function checkArray(arr, x) {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === x) {
+        return true
+} 
+}
+return false
+}
+console.log(checkArray([5,5,6], 7))
+
+// //ES6
+// const checkArray2 = (arr, el) => {
+//     return arr.includes(el)
+// }
+// console.log(checkArray2([5,5,6], 5))
+
+// function checkArray3(arr, num) {
+//     retu
+// }
